@@ -126,6 +126,9 @@ export function activateTaskProperty(taskName, property) {
 ///////////////////////////////////////////////////////////////////
 // Delete Task logic
 export function deleteTask(taskName) {
+  const feedback = confirm(`You are deleting "${taskName}" task!`);
+
+  if (!feedback) return;
   const activeTask = model.state.tasks.findIndex(
     item => item.name === taskName && item.space === model.state.selectedSpace
   );

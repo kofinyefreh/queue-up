@@ -1,6 +1,7 @@
 // Utility to format date
-function formatDate(date) {
-  return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+function formatDate(timeStamp) {
+  const date = new Date(timeStamp);
+  console.log(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
 }
 
 // Capitalizing spaces
